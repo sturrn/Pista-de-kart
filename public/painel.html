@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area do piloto</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+         <h1>TURBO <span>KART</span></h1>
+         <nav class="painel-nav">
+             <a href="recordes.html" id="link-recordes">Recordes</a>
+             <a href="index.html" id="botaoSair">Sair</a>
+         </nav>
+    </header>
+    <main>
+        <section>
+            <h2>AREA DO PILOTO</h2>
+            <h3>Olá, <span id="user-name"></span></h3>
+        </section>
+
+        <section id="reserva-piloto">
+            <h2>Nova Reserva</h2>
+            <p id="painel-status" role="status" aria-live="polite" hidden></p>
+            <form id="reserva-pista">
+                <label for="data">Data:</label>
+                <input type="date" id="data" name="data" required>
+                <label for="horas">Horas:</label>
+                <input type="number" name="horas" id="horas" required min="1" max="5">
+                <label for="pacote">Pacote:</label>
+                <select id="pacote" name="pacote">
+                    <option value="1">Simples - R$ 99/hora</option>
+                    <option value="2">Completo - R$ 150/hora</option>
+                </select>
+                <button type="submit">Reservar</button>
+            </form>
+            <section id="ver-reservas">
+                <h2>Minhas reservas:</h2>
+                <div id="guia">Carregando...</div>
+                <div id="lista-reservas"></div>
+            </section>
+        </section>
+    </main>
+    
+    <footer>
+        <p>TURBO KART</p>
+        <p>Todos os Direitos reservados &copy; 2026</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/painel.js"></script>
+
+</body>
+</html>

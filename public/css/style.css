@@ -1,0 +1,661 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b0b;
+    color: #fff;
+}
+
+header {
+    background: #050505;
+    border-bottom: 3px solid #e10600;
+    padding: 20px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 32px;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -2px;
+}
+
+header h1 span {
+    color: #e10600;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: #e10600;
+}
+
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+a:hover {
+    color: #e10600;
+}
+
+.hero {
+    min-height: 500px;
+    padding: 80px 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background:
+        linear-gradient(90deg, #050505 35%, rgba(5, 5, 5, .65)),
+        url("../images.jpg") center/cover;
+}
+
+.hero h2 {
+    color: #e10600;
+    text-transform: uppercase;
+    font-size: 22px;
+    letter-spacing: 3px;
+}
+
+#tituloprincipal {
+    font-size: 75px;
+    font-weight: 900;
+    font-style: italic;
+    line-height: .9;
+}
+
+#pista {
+    padding: 70px 7%;
+    background: #fff;
+    color: #111;
+}
+
+#pista > p {
+    color: #e10600;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+#pista h3,
+#preco h3 {
+    font-size: 38px;
+    margin: 10px 0 35px;
+    text-transform: uppercase;
+}
+
+.pontos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.pontos-card {
+    background: #111;
+    color: #fff;
+    padding: 25px;
+    border-left: 5px solid #e10600;
+    min-height: 170px;
+    transition: 0.25s;
+}
+
+.pontos-card:hover {
+    transform: translateY(-6px);
+    border-left-color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .3);
+}
+
+.pontos-card > p:first-child {
+    color: #e10600;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.pontos-card h4 {
+    margin: 15px 0 10px;
+    text-transform: uppercase;
+}
+
+#preco {
+    padding: 70px 7%;
+    background: #0b0b0b;
+}
+
+#preco article {
+    display: inline-block;
+    vertical-align: top;
+    width: 46%;
+    margin-right: 2%;
+    padding: 30px;
+    background: #151515;
+    border: 1px solid #333;
+    border-top: 5px solid #e10600;
+    transition: 0.25s;
+}
+
+#preco article:hover {
+    transform: translateY(-5px);
+    border-color: #e10600;
+}
+
+#preco article h4 {
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+#preco strong {
+    display: block;
+    color: #e10600;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+#preco button {
+    display: block;
+    margin: 35px auto 0;
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+#preco button a {
+    display: block;
+    padding: 17px 55px;
+    background: #e10600;
+    color: #fff;
+    border: 2px solid #e10600;
+    font-size: 16px;
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: 0.25s;
+}
+
+#preco button a:hover {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(225, 6, 0, .35);
+}
+
+main > a {
+    display: block;
+    width: fit-content;
+    margin: 35px auto;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    transition: 0.25s;
+}
+
+main > a:hover {
+    color: #e10600;
+    transform: scale(1.05) skew(-5deg);
+}
+
+main > section:not(.hero):not(#pista):not(#preco) {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+}
+
+.login,
+#form-cadastro,
+#reserva-piloto {
+    background: #151515;
+    border-top: 5px solid #e10600;
+}
+
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+}
+
+.login h1,
+#form-cadastro h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.login p,
+#form-cadastro p {
+    color: #aaa;
+    margin-bottom: 25px;
+}
+
+
+input,
+select {
+    width: 100%;
+    padding: 14px;
+    margin: 8px 0 15px;
+    background: #080808;
+    border: 1px solid #444;
+    color: #fff;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:hover,
+select:hover {
+    border-color: #e10600;
+}
+
+input:focus,
+select:focus {
+    border-color: #e10600;
+    box-shadow: 0 0 0 1px #e10600;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+form button {
+    width: 100%;
+    padding: 15px;
+    background: #e10600;
+    border: 2px solid #e10600;
+    color: #fff;
+    font-weight: 900;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+form button:hover {
+    background: #fff;
+    border-color: #fff;
+    color: #000;
+    transform: translateY(-2px);
+}
+
+
+.cadastro-via-login {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cadastro-via-login a {
+    color: #e10600;
+    font-weight: bold;
+}
+
+.cadastro-via-login a:hover {
+    color: #fff;
+}
+
+#botaoSair {
+    background: #e10600;
+    padding: 10px 22px;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#link-recordes {
+    padding: 10px 22px;
+    border: 1px solid #e10600;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#link-recordes:hover {
+    background: #e10600;
+}
+
+#botaoSair:hover {
+    background: #fff;
+    color: #000;
+    transform: translateY(-2px);
+}
+
+.painel-nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#ver-reservas {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid #333;
+}
+
+#ver-reservas h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+#guia {
+    color: #aaa;
+}
+
+.recordes-main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 55px 7% 70px;
+}
+
+.recordes-status {
+    min-height: 45vh;
+    padding: 80px 7%;
+    color: #aaa;
+    text-align: center;
+}
+
+.recordes-intro {
+    margin-bottom: 35px;
+}
+
+.recordes-etiqueta,
+.recorde-legenda {
+    color: #e10600;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.recordes-intro h2 {
+    margin: 10px 0;
+    font-size: clamp(32px, 6vw, 54px);
+    font-style: italic;
+}
+
+.recordes-intro > p:not(.recordes-etiqueta) {
+    color: #aaa;
+    line-height: 1.6;
+}
+
+.recordes-intro .recordes-boas-vindas {
+    margin: 12px 0;
+    color: #fff;
+    font-size: 20px;
+}
+
+.recordes-boas-vindas strong {
+    color: #e10600;
+}
+
+.recorde-form-card,
+.recordes-todos {
+    margin: 25px 0;
+    padding: 26px;
+    background: #151515;
+    border: 1px solid #333;
+    border-top: 4px solid #e10600;
+}
+
+.recorde-form-card h3,
+.recordes-todos h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.recorde-form-card > p {
+    margin-bottom: 12px;
+    color: #aaa;
+    line-height: 1.5;
+}
+
+#form-recorde input {
+    margin: 8px 0 15px;
+    font-variant-numeric: tabular-nums;
+}
+
+#form-recorde button:disabled {
+    cursor: wait;
+    opacity: 0.65;
+    transform: none;
+}
+
+.recorde-feedback {
+    min-height: 20px;
+    margin-top: 12px;
+    color: #f1c8c8;
+}
+
+.recordes-aviso {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 14px;
+    background: #241616;
+    border-left: 3px solid #e10600;
+    color: #f1c8c8;
+    font-size: 13px;
+}
+
+.recordes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.recorde-card {
+    padding: 28px;
+    background: #151515;
+    border: 1px solid #333;
+    border-top: 5px solid #e10600;
+}
+
+.recorde-cabecalho {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.recorde-icone {
+    display: grid;
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    place-items: center;
+    background: #2b1714;
+    color: #ff4b43;
+    font-size: 27px;
+    font-weight: 900;
+}
+
+.recorde-cabecalho h3 {
+    margin-top: 5px;
+    font-size: 23px;
+}
+
+.recorde-descricao {
+    margin: 18px 0;
+    color: #aaa;
+    line-height: 1.5;
+}
+
+.lista-recordes {
+    display: grid;
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+.lista-recordes li {
+    display: grid;
+    grid-template-columns: 34px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 10px;
+    min-height: 52px;
+    padding: 10px 12px;
+    background: #0b0b0b;
+    border: 1px solid #292929;
+}
+
+.lista-recordes .posicao {
+    color: #e10600;
+    font-weight: 900;
+}
+
+.lista-recordes .piloto {
+    overflow: hidden;
+    color: #eee;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.lista-recordes strong {
+    color: #fff;
+    font-variant-numeric: tabular-nums;
+}
+
+.lista-recordes .recorde-vazio {
+    grid-column: 1 / -1;
+    color: #aaa;
+}
+
+.recordes-todos .lista-recordes {
+    margin-top: 16px;
+}
+
+.recordes-nota {
+    margin: 28px 0 20px;
+    color: #aaa;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.recordes-voltar {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 14px 22px;
+    background: #e10600;
+    border: 2px solid #e10600;
+    color: #fff;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.25s;
+}
+
+.recordes-voltar:hover {
+    background: #fff;
+    border-color: #fff;
+    color: #000;
+    transform: translateY(-2px);
+}
+
+
+footer {
+    background: #050505;
+    border-top: 2px solid #e10600;
+    padding: 25px 7%;
+    text-align: center;
+    color: #aaa;
+}
+
+footer p:first-child {
+    color: #fff;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 18px 5%;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    .painel-nav {
+        gap: 7px;
+    }
+
+    #link-recordes,
+    #botaoSair {
+        padding: 9px 12px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        min-height: 400px;
+        padding: 50px 7%;
+    }
+
+    #tituloprincipal {
+        font-size: 50px;
+    }
+
+    #pista h3,
+    #preco h3 {
+        font-size: 30px;
+    }
+
+    .pontos {
+        grid-template-columns: 1fr;
+    }
+
+    .recordes-main {
+        padding: 38px 5% 50px;
+    }
+
+    .recordes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .recorde-card {
+        padding: 22px 18px;
+    }
+
+    .recorde-form-card,
+    .recordes-todos {
+        padding: 22px 18px;
+    }
+
+    .recorde-cabecalho h3 {
+        font-size: 20px;
+    }
+
+    #preco article {
+        width: 100%;
+        margin: 0 0 15px;
+    }
+
+    main > section:not(.hero):not(#pista):not(#preco) {
+        margin: 25px 15px;
+        padding: 25px;
+    }
+
+    main > a {
+        font-size: 27px;
+    }
+}

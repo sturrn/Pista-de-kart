@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <main>
+          <a href="index.html">TURBO KART</a>
+          <section>
+            <h1>Boas vindas piloto(a)!!!</h1>
+            <p>Crie uma conta agora mesmo</p>
+            <form id="form-cadastro">
+                <input type="text" id="nome-cadastro" required placeholder="Digite seu nome..." maxlength="80">
+                <input type="tel" id="telefone-cadastro" autocomplete="tel" required placeholder="Digite seu Numero de telefone...">
+                <input type="email" id="email-cadastro" autocomplete="email" placeholder="Digite seu email..." required>
+                <input type="password" id="senha-cadastro" autocomplete="new-password" minlength="8" maxlength="72" required placeholder="Digite sua senha (mínimo 8 caracteres)...">
+                <input type="password" id="confirmacao" placeholder="Digite sua senha novamente..." required>
+                <button type="submit">Cadastre</button>
+            </form>
+          <p class="cadastro-via-login">Já tem uma conta 
+                <a href="login.html">Entre na sua conta!</a>
+            </p>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>TURBO KART</p>
+        <p>Todos os Direitos reservados &copy; 2026</p>
+    </footer>
+    <script src="js/api.js"></script>
+    <script src="js/cadastro.js"></script>
+</body>
+</html>
